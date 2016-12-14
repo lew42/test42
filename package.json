@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "base42": "^1.0.0",
+    "util42": "^1.0.0",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
