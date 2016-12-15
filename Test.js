@@ -1,6 +1,6 @@
-var is = require("is");
 var Mod3 = require("mod42/Mod3");
-var utils = require("utils");
+var utils = require("util42");
+var is = utils.is;
 var sanitize = utils.sanitizeString;
 
 var TestView = require("./TestView.js");
