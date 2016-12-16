@@ -14,11 +14,12 @@ var TestView = module.exports = View.extend({
 			var testView = this.parent;
 			var test = testView.parent;
 
-			this.item = View.item({
+			this.item = View.Item({
 				name: test.name,
 				icon: "beer",
 				btn: "bolt"
-			}).btn.click(function(){
+			});
+			this.item.btn.click(function(){
 				console.log(test.route);
 				if (test.route){
 					window.location = test.route.path;

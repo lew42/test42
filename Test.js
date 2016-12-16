@@ -4,6 +4,8 @@ var is = utils.is;
 var sanitize = utils.sanitizeString;
 
 var TestView = require("./TestView.js");
+var view = require("view42");
+var ViewCaptor = require("view42/code/ViewCaptor");
 
 var Test = module.exports = Mod3.extend({
 	name: "Test",
@@ -64,7 +66,7 @@ var Test = module.exports = Mod3.extend({
 	render: function(){
 		this.view = new TestView({
 			parent: this
-		})
+		});
 	},
 	// should only run for root test groups
 	getRootRoute: function(){
