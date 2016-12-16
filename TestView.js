@@ -28,7 +28,7 @@ var TestView = module.exports = View.extend({
 		}
 	}),
 	body: View.x({
-		addClass: "body",
+		addClass: "body padded",
 		content: function(){
 			var testView = this.parent;
 			var test = testView.parent;

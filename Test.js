@@ -5,7 +5,6 @@ var sanitize = utils.sanitizeString;
 
 var TestView = require("./TestView.js");
 var view = require("view42");
-var ViewCaptor = require("view42/code/ViewCaptor");
 
 var Test = module.exports = Mod3.extend({
 	name: "Test",
