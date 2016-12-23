@@ -20,7 +20,7 @@ var TestView = module.exports = View.extend({
 				btn: "bolt"
 			});
 			this.item.btn.click(function(){
-				console.log(test.route);
+				// console.log(test.route);
 				if (test.route){
 					window.location = test.route.path;
 				}
