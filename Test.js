@@ -78,9 +78,9 @@ var Test = module.exports = Mod3.extend({
 
 			this.root = this;
 
-			this.remaining = Test.route.remaining.slice(1);
-			if (Test.route.remaining.length){
-				this.next = Test.route.remaining[0];
+			this.remainder = Test.route.remainder.slice(1);
+			if (Test.route.remainder.length){
+				this.next = Test.route.remainder[0];
 			}
 		} else {
 			this.root = this.parent.root;
@@ -96,7 +96,7 @@ var Test = module.exports = Mod3.extend({
 				this.disable();
 				this.skip = true;
 			}
-			this.next = this.remaining.shift();
+			this.next = this.remainder.shift();
 			this.log("and next:", this.next);
 		}
 	},
@@ -107,12 +107,12 @@ var Test = module.exports = Mod3.extend({
 	add: function(child){
 		child.parent = this;
 		child.next = this.next;
-		child.remaining = this.remaining.slice(0);
+		child.remainder = this.remainder.slice(0);
 		this.tests.push(child);
 	},
 	// if the route doesn't match, skip it
 	prevent: function(child){
-		if (this.remaining.length && child.name !== this.remaining[0]){
+		if (this.remainder.length && child.name !== this.remainder[0]){
 			child.autoExec = false;
 		}
 	},
